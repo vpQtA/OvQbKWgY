@@ -1,0 +1,29 @@
+[package]
+name = "wluma"
+version = "4.6.0"
+authors = ["Maxim Baz", "Cyril Levis"]
+edition = "2021"
+
+[dependencies]
+ash = { version = "~0.38", features = ["linked"], default-features = false }
+wayland-client = { version = "~0.31" }
+wayland-backend = { version = "~0.3", features = ["dlopen"] }
+wayland-protocols = { version = "~0.32", features = ["client", "staging", "unstable"] }
+wayland-protocols-wlr = { version = "~0.3", features = ["client"] }
+serde = { version = "~1.0", features = ["derive"] }
+serde_yaml = "~0.9"
+toml = "~0.8"
+chrono = "~0.4"
+itertools = "~0.13"
+v4l = { version = "~0.14", features = ["libv4l"], default-features = false }
+ddc-hi = "~0.4"
+log = "~0.4"
+env_logger = "~0.11"
+inotify = "~0.11"
+lazy_static = "~1.5"
+xdg = "~2.5"
+dbus = "~0.9"
+anyhow = "~1.0"
+
+[dev-dependencies]
+mockall = "0.13"
