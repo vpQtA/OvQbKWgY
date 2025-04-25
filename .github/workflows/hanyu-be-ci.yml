@@ -38,7 +38,7 @@ jobs:
         run: mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -f hanyu-be
       - name: Log in to the container registry
         if: ${{ github.ref == 'refs/heads/main' }}
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
